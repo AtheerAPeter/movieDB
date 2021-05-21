@@ -1,8 +1,6 @@
 import {Image, Text, View, Platform, ScrollView} from 'react-native';
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import Styles from './Style';
-import config from '../../config';
-import {Colors} from '../../Theme';
 import BackBtn from '../../Components/BackBtn';
 import Avatar from './Avatar';
 import Skeleton from './Skeleton';
