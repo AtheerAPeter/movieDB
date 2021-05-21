@@ -20,13 +20,7 @@ const Styles = StyleSheet.create({
     borderRadius: 100,
     color: Colors.altText,
   },
-  backBtn: {
-    position: 'absolute',
-    left: 0,
-    top: 0,
-    paddingHorizontal: 23,
-    paddingVertical: 20,
-  },
+
   avatarName: {
     marginTop: 5,
 
@@ -49,6 +43,67 @@ const Styles = StyleSheet.create({
     height: 30,
     width: 80,
     borderRadius: 10,
+  },
+  movietitle: {
+    textAlign: 'center',
+    fontWeight: Platform.OS == 'ios' ? '900' : 'bold',
+    fontSize: 20,
+    marginTop: 25,
+  },
+  percentage: {
+    textAlign: 'center',
+    fontWeight: Platform.OS == 'ios' ? '900' : 'bold',
+    fontSize: 20,
+    marginTop: 15,
+    color: Colors.main,
+  },
+  sectionTitle: {
+    fontWeight: Platform.OS == 'ios' ? '800' : 'bold',
+    fontSize: 18,
+    marginBottom: 8,
+  },
+  overview: {
+    fontSize: 17,
+    color: Colors.altText,
+    fontWeight: Platform.OS == 'ios' ? '700' : 'bold',
+  },
+  skeletonImage: {
+    height: '80%',
+    width: '38%',
+    borderRadius: 10,
+    backgroundColor: Colors.dirty2,
+  },
+  skeletonTitle: {
+    marginTop: 25,
+    height: 30,
+    width: 250,
+    backgroundColor: Colors.dirty2,
+    borderRadius: 10,
+  },
+  skeletonSectionTitle: {
+    height: 30,
+    width: 100,
+    borderRadius: 10,
+    marginBottom: 8,
+    backgroundColor: Colors.dirty2,
+  },
+  skeletonLine: {
+    backgroundColor: Colors.dirty2,
+    height: 20,
+    borderRadius: 10,
+    marginBottom: 5,
+  },
+  skeletonTag: {
+    backgroundColor: Colors.dirty2,
+    height: 20,
+    borderRadius: 100,
+    marginRight: 5,
+  },
+  skeletonAvatarImage: {
+    height: 75,
+    width: 75,
+    borderRadius: 1000,
+    backgroundColor: Colors.dirty2,
   },
 });
 

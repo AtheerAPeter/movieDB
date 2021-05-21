@@ -1,5 +1,5 @@
-import {View, Text, TouchableOpacity, Platform} from 'react-native';
-import React, {useState, useEffect} from 'react';
+import {Text, TouchableOpacity} from 'react-native';
+import React from 'react';
 import Styles from './Style';
 import {Colors, Metrics} from '../../Theme';
 
