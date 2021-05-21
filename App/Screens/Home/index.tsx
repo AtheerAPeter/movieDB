@@ -5,7 +5,8 @@ import Tab from './Tab';
 import {useQuery} from 'react-query';
 import {moviesList, getTags} from '../../fetchers';
 import SingleCard from './SingleCard';
-import SkeletonCard from './SkeletonCard';
+import SkeletonCard from './Skeleton';
+import Skeleton from './Skeleton';
 
 const Home = ({navigation}: {navigation: any}) => {
   const [tab, setTab] = useState('upcoming');
@@ -109,15 +110,7 @@ const Home = ({navigation}: {navigation: any}) => {
           keyExtractor={item => item.id}
         />
       ) : (
-        <FlatList
-          nestedScrollEnabled
-          contentContainerStyle={Styles.flatlist}
-          data={[...Array(5)]}
-          renderItem={() => {
-            return <SkeletonCard />;
-          }}
-          keyExtractor={(item: any, index: number) => item}
-        />
+        <Skeleton />
       )}
     </View>
   );
