@@ -2,9 +2,8 @@ import React from 'react';
 import {View, ScrollView} from 'react-native';
 import Styles from './Style';
 import BackBtn from '../../Components/BackBtn';
-import {Colors} from '../../Theme';
 
-const Skeleton = ({navigation}: {navigation: any}) => {
+const Skeleton: React.FC<{navigation: object}> = ({navigation}) => {
   return (
     <ScrollView
       style={Styles.container}

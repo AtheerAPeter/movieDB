@@ -5,10 +5,13 @@ import Tab from './Tab';
 import {useQuery} from 'react-query';
 import {moviesList, getTags} from '../../fetchers';
 import SingleCard from './SingleCard';
-import SkeletonCard from './Skeleton';
 import Skeleton from './Skeleton';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {RootStackParamList} from '../../../App';
 
-const Home = ({navigation}: {navigation: any}) => {
+type HomeScreen = StackNavigationProp<RootStackParamList, 'Home'>;
+
+const Home: React.FC<{navigation: HomeScreen}> = ({navigation}) => {
   const [tab, setTab] = useState('upcoming');
   const {
     data: movies,

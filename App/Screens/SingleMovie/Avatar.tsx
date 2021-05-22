@@ -2,7 +2,7 @@ import Styles from './Style';
 import {Image, Text, View, Platform} from 'react-native';
 import React from 'react';
 
-const Avatar = ({item}: {item: any}) => {
+const Avatar: React.FC<{item: any}> = ({item}) => {
   return (
     <View
       key={item.id}

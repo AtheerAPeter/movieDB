@@ -6,8 +6,17 @@ import Avatar from './Avatar';
 import Skeleton from './Skeleton';
 import {useQuery} from 'react-query';
 import {movieDetails, getCredits} from '../../fetchers';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {RootStackParamList} from '../../../App';
+import {RouteProp} from '@react-navigation/native';
 
-const SingleMovie = ({navigation, route}: {navigation: any; route: any}) => {
+type SingleMovieScreen = StackNavigationProp<RootStackParamList, 'SingleMovie'>;
+type SingleMovieScreenRouteProp = RouteProp<RootStackParamList, 'SingleMovie'>;
+
+const SingleMovie: React.FC<{
+  navigation: SingleMovieScreen;
+  route: SingleMovieScreenRouteProp;
+}> = ({navigation, route}) => {
   const id = route.params.movieID;
   const {data, status, error} = useQuery(['movieDetails', id], movieDetails);
   const {

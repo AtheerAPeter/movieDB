@@ -3,17 +3,12 @@ import React from 'react';
 import Styles from './Style';
 import {Colors, Metrics} from '../../Theme';
 
-const Tab = ({
-  getMovies,
-  tab,
-  TheTab,
-  title,
-}: {
-  getMovies: any;
+const Tab: React.FC<{
+  getMovies: (category: string) => void;
   tab: string;
   TheTab: string;
   title: string;
-}) => {
+}> = ({getMovies, tab, TheTab, title}) => {
   return (
     <TouchableOpacity
       onPress={() => getMovies(TheTab)}

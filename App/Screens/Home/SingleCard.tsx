@@ -1,17 +1,12 @@
-import {TouchableOpacity, View, Text, Image, Platform} from 'react-native';
+import {TouchableOpacity, View, Text, Image} from 'react-native';
 import React from 'react';
-import {Colors, Metrics} from '../../Theme';
 import Styles from './Style';
 import moment from 'moment';
 
-const SingleCard = ({
+const SingleCard: React.FC<{item: any; tags: any; navigation: any}> = ({
   item,
   tags,
   navigation,
-}: {
-  item: any;
-  tags: any;
-  navigation: any;
 }) => {
   return (
     <TouchableOpacity

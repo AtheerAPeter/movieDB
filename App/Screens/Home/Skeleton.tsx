@@ -2,7 +2,7 @@ import {FlatList, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import Styles from './Style';
 
-const Skeleton = () => {
+const Skeleton: React.FC = () => {
   return (
     <FlatList
       nestedScrollEnabled

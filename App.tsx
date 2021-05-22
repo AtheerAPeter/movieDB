@@ -19,7 +19,13 @@ import {
 } from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 import SingleMovie from './App/Screens/SingleMovie';
-const Stack = createStackNavigator();
+
+export type RootStackParamList = {
+  Home: undefined;
+  SingleMovie: {movieID: number};
+};
+
+const Stack = createStackNavigator<RootStackParamList>();
 
 const App = () => {
   return (
